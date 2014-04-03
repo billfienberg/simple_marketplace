@@ -17,3 +17,6 @@ Seller.create(name:"Todd", email:"def@456.com")
 Seller.create(name:"Matt", email:"xyz@789.com")
 
 # Add 3 items
+Seller.first.items.create(name: "water bottle", description: "Bubba", price: 10.75)
+Seller.find(2).items.create(name: "car", description: "Ferrari", price: 60000.00)
+Seller.last.items.create(name:"computer", description:"Macbook Air", price: 1400)
