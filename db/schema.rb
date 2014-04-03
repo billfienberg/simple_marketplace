@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140403200406) do
+ActiveRecord::Schema.define(version: 20140403204020) do
 
   create_table "buyers", force: true do |t|
     t.string   "name"
@@ -56,16 +56,12 @@ ActiveRecord::Schema.define(version: 20140403200406) do
     t.boolean  "buyer_confirmation",  default: false
     t.boolean  "seller_confirmation", default: false
     t.integer  "buyer_id"
-    t.integer  "seller_id"
     t.integer  "item_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "organization_id"
   end
 
   add_index "transactions", ["buyer_id"], name: "index_transactions_on_buyer_id"
   add_index "transactions", ["item_id"], name: "index_transactions_on_item_id"
-  add_index "transactions", ["organization_id"], name: "index_transactions_on_organization_id"
-  add_index "transactions", ["seller_id"], name: "index_transactions_on_seller_id"
 
 end
