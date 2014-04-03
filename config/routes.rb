@@ -1,4 +1,21 @@
 Marketplace::Application.routes.draw do
+  get "organizations/index"
+  get "organizations/new"
+  get "organizations/create"
+  get "organizations/show"
+  get "transactions/index"
+  get "transactions/new"
+  get "transactions/create"
+  get "transactions/show"
+  get "items/index"
+  get "items/new"
+  get "items/create"
+  get "items/show"
+  get "sellers/index"
+  get "sellers/new"
+  get "sellers/create"
+  get "new/create"
+  get "new/index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

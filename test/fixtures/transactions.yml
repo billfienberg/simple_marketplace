@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  buyer_confirmation: false
+  seller_confirmation: false
+  buyer_id: 
+  seller_id: 
+  item_id: 
+
+two:
+  buyer_confirmation: false
+  seller_confirmation: false
+  buyer_id: 
+  seller_id: 
+  item_id: 
