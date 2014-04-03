@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140403183514) do
+ActiveRecord::Schema.define(version: 20140403184722) do
 
   create_table "buyers", force: true do |t|
     t.string   "name"
@@ -51,8 +51,8 @@ ActiveRecord::Schema.define(version: 20140403183514) do
   end
 
   create_table "transactions", force: true do |t|
-    t.boolean  "buyer_confirmation"
-    t.boolean  "seller_confirmation"
+    t.boolean  "buyer_confirmation",  default: false
+    t.boolean  "seller_confirmation", default: false
     t.integer  "buyer_id"
     t.integer  "seller_id"
     t.integer  "item_id"
