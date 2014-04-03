@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140403190512) do
+ActiveRecord::Schema.define(version: 20140403200406) do
 
   create_table "buyers", force: true do |t|
     t.string   "name"
@@ -27,12 +27,14 @@ ActiveRecord::Schema.define(version: 20140403190512) do
     t.text     "photo1"
     t.text     "photo2"
     t.text     "photo3"
-    t.boolean  "sold",        default: false
+    t.boolean  "sold",            default: false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "seller_id"
+    t.integer  "organization_id"
   end
 
+  add_index "items", ["organization_id"], name: "index_items_on_organization_id"
   add_index "items", ["seller_id"], name: "index_items_on_seller_id"
 
   create_table "organizations", force: true do |t|

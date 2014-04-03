@@ -16,7 +16,13 @@ Seller.create(name:"Bill", email:"abc@123.com")
 Seller.create(name:"Todd", email:"def@456.com")
 Seller.create(name:"Matt", email:"xyz@789.com")
 
-# Add 3 items
-Seller.first.items.create(name: "water bottle", description: "Bubba", price: 10.75)
-Seller.find(2).items.create(name: "car", description: "Ferrari", price: 60000.00)
-Seller.last.items.create(name:"computer", description:"Macbook Air", price: 1400)
+# Add 4 items
+Seller.first.items.create(name: "water bottle", description: "Bubba", price: 10.75, organization_id: 1)
+Seller.first.items.create(name: "Backpack", description: "Jansport", price: 7.80, organization_id: 2)
+Seller.find(2).items.create(name: "car", description: "Ferrari", price: 60000.00, organization_id: 2)
+Seller.last.items.create(name:"computer", description:"Macbook Air", price: 1400, organization_id: 3)
+
+# Add 3 Organizations
+Organization.create(name:"Austin Pets Alive")
+Organization.create(name:"Connect2Good")
+Organization.create(name:"Yellow Bike Project")
