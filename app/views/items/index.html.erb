@@ -1,2 +1,9 @@
-<h1>Items#index</h1>
-<p>Find me in app/views/items/index.html.erb</p>
+<h1>Current Inventory</h1>
+<% @items.each do |x| %>
+  <div class="item">
+    <h4><%= x.name %></h4>
+    <p><%= x.price %></p>
+    <p><%= x.description %></p>
+    <%= link_to "Show Details", item_path(x.id) %>
+  </div>
+  <% end %>

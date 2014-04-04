@@ -1,4 +1,6 @@
 Marketplace::Application.routes.draw do
+  root 'static_pages#home'
+  resources :items
   get "organizations/index"
   get "organizations/new"
   get "organizations/create"
@@ -7,10 +9,10 @@ Marketplace::Application.routes.draw do
   get "transactions/new"
   get "transactions/create"
   get "transactions/show"
-  get "items/index"
-  get "items/new"
-  get "items/create"
-  get "items/show"
+  # get "items/index"
+  # get "items/new"
+  # get "items/create"
+  # get "items/show"
   get "sellers/index"
   get "sellers/new"
   get "sellers/create"

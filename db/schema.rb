@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140403204020) do
+ActiveRecord::Schema.define(version: 20140404153406) do
 
   create_table "buyers", force: true do |t|
     t.string   "name"
@@ -32,6 +32,8 @@ ActiveRecord::Schema.define(version: 20140403204020) do
     t.datetime "updated_at"
     t.integer  "seller_id"
     t.integer  "organization_id"
+    t.integer  "percent"
+    t.boolean  "agreement"
   end
 
   add_index "items", ["organization_id"], name: "index_items_on_organization_id"
