@@ -1,2 +1,9 @@
-<h1>Items#show</h1>
-<%= @items %>
+<h3><%= @item.name %></h3>
+<p>$<%= @item.price %></p>
+<p><%= @item.description %></p>
+
+
+<%= link_to "Contact Seller" %>
+<%= link_to "Buy Item" %><br>
+<br>
+<%= link_to "Back", items_path %>
